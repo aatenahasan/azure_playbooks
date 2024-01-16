@@ -1,0 +1,9 @@
+---
+- name: Test hello world
+  hosts: localhost
+  vars:
+    ansible_connection: local
+  tasks:
+    - name: Say hello world
+      ansible.builtin.debug:
+        msg: test test please work! I'm running this against {{ hostslol }}.
