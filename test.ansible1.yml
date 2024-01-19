@@ -1,8 +1,8 @@
 ---
 - name: Test hello world
-  hosts: all
+  hosts: localhost
   vars:
-    hostnames:
+    hostslol:
       - host1
       - host2
       - host3
@@ -10,5 +10,5 @@
   tasks:
     - name: Say hello world
       ansible.builtin.debug:
-        msg: test test please work! I'm running this against "{{ item }}" 
-      loop: "{{ hostnames }}"
+        msg: test test please work! I'm running this against "{{ item }}".
+      loop: "{{ hostslol }}"
